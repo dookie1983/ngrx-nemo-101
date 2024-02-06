@@ -8,7 +8,7 @@ import { StockState } from '../app/interface/stock-state';
 
 export class StoreService {
   private state = new BehaviorSubject<StockState>({
-    limit: 10,
+    limit: 1,
     offset: 0
   });
 

@@ -1,10 +1,77 @@
-<div>
-  Stock limit: <button (click)="store.decreaseLimit(10)">-</button>
-  {{ store.limit$| async}}
-  <button (click)="store.increaseLimit(10)">+</button>
-</div>
-<div>
-  Stock offset: <button (click)="store.decreaseOffset(10)">-</button>
-  {{ store.offset$| async}}
-  <button (click)="store.increaseOffset(10)">+</button>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <div>
+    Stock limit: <button (click)="store.decreaseLimit(1)">-</button>
+    {{ store.limit$ | async }}
+    <button (click)="store.increaseLimit(1)">+</button>
+  </div>
+  <div>
+    Stock offset: <button (click)="store.decreaseOffset(1)">-</button>
+    {{ store.offset$ | async }}
+    <button (click)="store.increaseOffset(1)">+</button>
+  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile Stocks</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .mobile-item {
+        flex: 1;
+        max-width: calc(33.333% - 20px);
+        box-sizing: border-box;
+        margin: 10px;
+        padding: 10px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .mobile-item img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+      button {
+        padding: 10px 15px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        background-color: #f5f5f5;
+        color: #333;
+        cursor: pointer;
+        border-radius: 4px;
+        outline: none;
+      }
+
+      button:hover {
+        background-color: #e0e0e0;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h2>Mobile Stock</h2>
+      <div class="body">
+          <div class="mobile-item">
+            <img src="https://www.ais.th/content/dam/ais/consumer/store/devices/apple/iphone/iphone-15-series/iphone-15/product-detail/th/green/iphone-15-pdp-image-position-1a-green-color.jpg" alt="Mobile 1" />
+            <h3>1.iPhone 15 128GB</h3>
+            <p>Brand: Apple</p>
+            <p>Color: Green</p>
+            <p>QTY: 100</p>
+            <p>Promotion: ลด 1,000 บาท เฉพาะ iPhone 15 Pro (128GB / 256GB / 512GB) เครื่องเปล่าเท่านั้น</p>
+          </div>
+      </div>
+    </section>
+  </body>
+</html>
